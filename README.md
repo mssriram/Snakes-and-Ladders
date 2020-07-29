@@ -7,4 +7,4 @@ In the file titled "transition_matrix.py3", I have created a transition probabil
 
 The first method is known as the Monte Carlo method where a system is modeled and the executed with random inputs. The second method uses Markov chains. The first method is more practical while the second one is purely theoretical.
 
-I have also included a shell script which you can use in case you want to run it multiple times.
+I have also included a shell script which you can use in case you want to run it multiple times. It takes the number of snakes and ladders as inputs but you can change it to whatever you want.
