@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-switcher={57: 24, 78: 30, 53: 17, 72: 48, 5: 34, 25: 42, 9: 31, 36: 55}
+switcher={57: 24, 78: 30, 53: 17, 72: 48, 5: 34, 25: 42, 9: 31, 36: 55}						#provides the positions of the snakes and ladders. 
 		
 trans_array=np.zeros(shape=(100,100))
 i=0
