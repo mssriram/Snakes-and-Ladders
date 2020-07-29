@@ -35,7 +35,7 @@ def ladder(i):							#Creating the ladders on the board
         return True
 
 
-def temp_board():					#Creates a temporary board to extract the lengths of the snakes and ladders
+def temp_board():					#Creates a temporary board to create a template of the lengths of the snakes and ladders
 
     while len(snake_length)<snakes or len(ladder_length)<ladders:
         head=random.randint(0,100)
@@ -78,7 +78,7 @@ def std_deviation(mean):				#Calculating std. deviation
     std=sqrt(sum(sd)/len(sd))
     return std
     
-itirations=50000	 #input("enter no. of itirations\n")    
+itirations=50000	                             #input("enter no. of itirations\n")    
 newfile=open("newdata.txt","w")
 avgfile=open("avg_len.dat","a")
 avg=0
@@ -89,7 +89,7 @@ avg_len=[]
 ladders=int(input())
 snakes=int(input())
 
-min_snake=10			#int(input())			#min, max length of the snakes and ladders
+min_snake=10			#int(input())			#min, max length of the snakes and ladders. You can uncomment the input statemnets if you want to give them as inputs
 max_snake=70			#int(input())
 min_ladder=10			#int(input())
 max_ladder=70			#int(input())
