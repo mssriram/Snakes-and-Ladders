@@ -6,7 +6,7 @@ switcher={57: 24, 78: 30, 53: 17, 72: 48, 5: 34, 25: 42, 9: 31, 36: 55}
 trans_array=np.zeros(shape=(100,100))
 i=0
 
-for i in range(0,100):
+for i in range(0,100):												#creates the basic transition matrix without snakes and ladders
 	for j in range(1,7):
 		if i<94:
 			trans_array[i][i+j]=1/6
@@ -18,7 +18,7 @@ for i in range(0,100):
 
 i=0
 n=0
-for i in switcher.keys():
+for i in switcher.keys():											#adds the snakes and ladders to the matrix
 	if i<switcher.get(i):
 		for j in range(0,100):
 			trans_array[j][i]=0
@@ -35,7 +35,7 @@ for i in switcher.keys():
 
 
 i=0
-for i in switcher.keys():
+for i in switcher.keys():											#makes the row containing snakes and ladders to be 1
 	trans_array[i]=0
 	trans_array[i][switcher.get(i)]=1
 
@@ -45,28 +45,27 @@ n=0
 j=0
 arr=list(switcher.keys())
 arr.sort()
-for i in arr:
+for i in arr:														#deletes the rows and columns containing the snakes and ladders
 	trans_array=np.delete(trans_array,i-j,0)
 	trans_array=np.delete(trans_array,i-j,1)
 	j+=1
 
 rows,columns=trans_array.shape
 
-vector=np.zeros(shape=(1,rows))
+vector=np.zeros(shape=(1,rows))										#creates the initial vector with 1 in first position
 vector[0][1] = 1
 
 i=0
 j=0	
 prob = []
-file = open("markov_data.dat","w")
 
-while True:
+while True:															#multiplies the vector withe matrix itiratively
 	i+=1
 	newvector=vector.dot(trans_array)	
 	vector=newvector
 	sumv=np.sum(vector)
 	prob.append(vector[0][91])
-	if vector[0][91]>0.999:
+	if vector[0][91]>0.99:											#stops when the final element reaches a value of 0.99. This is just to break out of the loop.
 		print(i)
 		break
 
