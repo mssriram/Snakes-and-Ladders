@@ -6,3 +6,5 @@ In the file titled "snake_and_ladder.py3", I have provided the main code for the
 In the file titled "transition_matrix.py3", I have created a transition probability matrix based on a dictionary of snakes and ladders. Then I have created a initial vector and multiplied both of them itiratively. This essentially does the same thing the above code does but in a different method. Both of them have their pros and cons. 
 
 The first method is known as the Monte Carlo method where a system is modeled and the executed with random inputs. The second method uses Markov chains. The first method is more practical while the second one is purely theoretical.
+
+I have also included a shell script which you can use in case you want to run it multiple times.
