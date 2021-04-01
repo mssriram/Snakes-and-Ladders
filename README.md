@@ -1,4 +1,6 @@
 # Snakes-and-Ladders
+https://docs.google.com/document/d/1IgPB9_XS8YAoeQ6e1qb7Mkf-paeSXxA4kLVSa9XC3oo/edit?usp=sharing
+
 In this project, I have coded a simple game of snakes and ladders using python and have done some mathematical analysis on it.
 
 In the file titled "snake_and_ladder.py3", I have provided the main code for the game which simulates n number of games with the inputs being the number of snakes and ladders. You can also change the min and max length of the snakes and ladders. While I have only coded it to have 2 inputs, you can change the rest of the variables however you like.
